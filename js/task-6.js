@@ -22,12 +22,13 @@ destroyBtn.addEventListener("click", () => {
 });
 
 function createBoxes(amount) {
+  const inputNum = Number(amount); //an obvious transformation
   let size = 30;
-  let div = "";
-  for (let i = 1; i <= amount; i++, size += 10) {
-    div += `<div class = "box" style = "background-color: ${getRandomHexColor()}; width:${size}px; height:${size}px;" ></div>`;
+  let divElementsHtml = "";
+  for (let i = 1; i <= inputNum; i++, size += 10) {
+    divElementsHtml += `<div class = "box" style = "background-color: ${getRandomHexColor()}; width:${size}px; height:${size}px;" ></div>`;
   }
-  divBox.insertAdjacentHTML("beforeend", div);
+  divBox.insertAdjacentHTML("beforeend", divElementsHtml);
 }
 
 function destroyBoxes() {

@@ -25,10 +25,10 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 const htmlBlock = images.reduce(
   (accumulator, { url, alt }) =>
     (accumulator += `<li class='gallery-list-item'><img src = '${url}' alt = '${alt}' width = '360' height = '300'></li>`),
-  ""
+  ''
 );
 gallery.insertAdjacentHTML("beforeend", htmlBlock);
